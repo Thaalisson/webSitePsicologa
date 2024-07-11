@@ -1,0 +1,120 @@
+/* src/styles/Contact.css */
+
+.contact-container {
+  padding: 4rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to bottom, white, #F28b82); /* Gradiente de fundo do branco para coral */
+  color: #333; /* Cor do texto */
+  text-align: center;
+}
+
+.contact-content {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 900px;
+  width: 100%;
+  padding: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center; /* Centraliza os itens verticalmente */
+}
+
+.contact-info {
+  flex: 1;
+  padding-right: 2rem;
+  min-width: 300px;
+}
+
+.contact-form-container {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 300px;
+}
+
+.contact-form-container h2 {
+  margin-bottom: 1.5rem; /* Espaçamento inferior para separar do formulário */
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.input, .select, .textarea {
+  margin: 0.5rem 0;
+  padding: 1rem;
+  width: 100%;
+  box-sizing: border-box; /* Garante que o padding não afete a largura total */
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.textarea {
+  height: 150px;
+}
+
+.button {
+  margin: 0.5rem 0;
+  padding: 1rem 2rem;
+  background: #67AABC; /* Azul claro do tema */
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  align-self: flex-end;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background: #555;
+}
+
+.icon-link {
+  display: flex;
+  align-items: center;
+  margin: 0.5rem 0;
+  text-decoration: none;
+  color: #333; /* Ajusta a cor do ícone para combinar com o texto */
+  font-size: 1.2rem;
+}
+
+.icon-link i {
+  margin-right: 0.5rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .contact-container {
+    padding: 2rem 1rem;
+  }
+
+  .contact-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-info {
+    padding-right: 0;
+    padding-bottom: 2rem;
+    text-align: center;
+  }
+
+  .contact-form-container {
+    align-items: center;
+  }
+
+  .contact-form {
+    align-items: center;
+  }
+
+  .button {
+    align-self: center;
+  }
+}

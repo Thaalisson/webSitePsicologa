@@ -1,0 +1,112 @@
+/* src/styles/Work.css */
+
+.work-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4rem 2rem;
+  background: linear-gradient(to bottom, #67AABC, #A3B4B8); /* Gradiente de fundo com as cores do site */
+  color: #fff; /* Cor do texto */
+  text-align: center;
+  position: relative;
+}
+
+.text-container {
+  max-width: 800px;
+  margin-bottom: 2rem;
+}
+
+.text-container h1 {
+  font-size: 4rem; /* Tamanho maior para o título */
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.text-container h1::after {
+  content: '';
+  display: block;
+  width: 80px; /* Largura da linha */
+  height: 4px; /* Altura da linha */
+  background-color: #F28b82; /* Cor coral para a linha */
+  margin: 1rem auto 0; /* Centralizar a linha */
+}
+
+.cards-photo-container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+}
+
+.cards-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 600px;
+}
+
+.card {
+  background: #fff; /* Fundo claro para as cartas */
+  color: #333;
+  border-radius: 10px; /* Cantos arredondados */
+  padding: 2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra das cartas */
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card h3 {
+  margin-top: 0;
+}
+
+.work-photo-container {
+  margin-left: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.work-photo {
+  width: 100%;
+  max-width: 450px; /* Aumenta o tamanho máximo da imagem */
+  height: auto;
+  border-radius: 10px; /* Bordas arredondadas */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra da imagem */
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .work-container {
+    padding: 2rem 1rem;
+  }
+
+  .cards-photo-container {
+    flex-direction: column;
+  }
+
+  .work-photo-container {
+    margin-left: 0;
+    margin-top: 2rem;
+  }
+
+  .text-container {
+    padding: 0.5rem;
+  }
+}
