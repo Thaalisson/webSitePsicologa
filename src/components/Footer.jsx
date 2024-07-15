@@ -12,10 +12,10 @@ const Footer = () => {
         <p className="footer-text">Psicóloga Erivan</p>
       </div>
       <div className="info-container">
-        <a href="https://www.instagram.com" target="_blank" className="icon-link">
+        <a href="https://www.instagram.com" className="icon-link">
           <i className="fab fa-instagram"></i>
         </a>
-        <a href="https://www.whatsapp.com" target="_blank" className="icon-link">
+        <a href="https://www.whatsapp.com"  className="icon-link">
           <i className="fab fa-whatsapp"></i>
         </a>
       </div>
