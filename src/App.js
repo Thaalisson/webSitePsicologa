@@ -8,6 +8,7 @@ import Contact from './sections/Contact';
 import Videos from './sections/Videos';
 import Welcome from './sections/Welcome';
 import Blog from './sections/Blog';
+import Formacao from './sections/Formacao';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
       <main>
         <Welcome />
         <About />
+        <Formacao/>
         <Work />
         <Blog />
         <Videos />
