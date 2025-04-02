@@ -3,10 +3,20 @@ import React from 'react';
 import foto from '../assets/images/ErivanWork.jpeg';
 import { motion } from 'framer-motion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPeopleRoof, faHeart, faBrain } from '@fortawesome/free-solid-svg-icons'; // Ícones principais
+import { faBriefcase,faPeopleRoof, faHeart, faBrain } from '@fortawesome/free-solid-svg-icons'; // Ícones principais
 
 const Work = () => {
   const cards = [
+    {
+      title: 'Psicologia Organizacional',
+      text: 'Intervenções focadas na saúde emocional de equipes, clima organizacional e performance corporativa.',
+      icon: faBriefcase // ícone corporativo
+    },
+    {
+      title: 'Neuropsicologia',
+      text: 'Avaliação e intervenção em questões cognitivas e emocionais.',
+      icon: faBrain, // cérebro
+    },
     {
       title: 'Terapia Familiar Sistêmica',
       text: 'Facilitando a comunicação e resolução de conflitos dentro da família.',
@@ -17,11 +27,7 @@ const Work = () => {
       text: 'Apoiando casais a fortalecerem seus laços e superarem crises.',
       icon: faHeart, // coração
     },
-    {
-      title: 'Neuropsicologia',
-      text: 'Avaliação e intervenção em questões cognitivas e emocionais.',
-      icon: faBrain, // cérebro
-    },
+ 
   ];
 
   return (
