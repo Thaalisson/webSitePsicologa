@@ -12,19 +12,10 @@ import {
 
 const cursos = [
   {
-    titulo: 'Terapia Cognitivo-Comportamental',
-    subtitulo: 'Pós-graduação 2016 - 2017',
-    icon: faBrain,
-  },
-  {
-    titulo: 'Casais e Família – Sistêmica Breve',
-    subtitulo: 'Especialização 2013 - 2014',
-    icon: faPeopleRoof,
-  },
-  {
-    titulo: 'Terapia Familiar Sistêmica',
-    subtitulo: 'Curso de Formação 2010 - 2012',
-    icon: faCertificate,
+    titulo: 'Psicologia Institucional – UNIG',
+    subtitulo: 'Pós-graduação 2007',
+    icon: faBookOpen,
+    
   },
   {
     titulo: 'Neuropsicologia – Instituto Pieron',
@@ -32,9 +23,19 @@ const cursos = [
     icon: faBrain,
   },
   {
-    titulo: 'Psicologia Institucional – UNIG',
-    subtitulo: 'Pós-graduação 2007',
-    icon: faBookOpen,
+    titulo: 'Terapia Cognitivo-Comportamental',
+    subtitulo: 'Pós-graduação 2016 - 2017',
+    icon: faBrain,
+  },
+  {
+    titulo: 'Terapia Familiar Sistêmica',
+    subtitulo: 'Curso de Formação 2010 - 2012',
+    icon: faCertificate,
+  },
+  {
+    titulo: 'Casais e Família – Sistêmica Breve',
+    subtitulo: 'Especialização 2013 - 2014',
+    icon: faPeopleRoof,
   },
   {
     titulo: 'Universidade Católica de Santos',

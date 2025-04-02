@@ -17,7 +17,7 @@ const Contact = () => {
         >
           <h2 className="text-4xl font-bold text-darkblue1 mb-4">Contato</h2>
           <p className="text-lg text-darkblue2 leading-relaxed">
-            Fico feliz em receber sua mensagem! Você pode entrar em contato diretamente pelas redes sociais abaixo ou preencher o formulário ao lado.
+            Fico feliz em receber sua mensagem! Você pode entrar em contato diretamente pelas redes sociais abaixo ou preencher o formulário.
           </p>
 
           <div className="space-y-4 text-lg">

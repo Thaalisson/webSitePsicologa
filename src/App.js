@@ -20,9 +20,9 @@ function App() {
       <main>
         <Welcome />
         <About />
-        <Formacao/>
-        <Work />
+        <Formacao/>        
         <CorporateImpact/>
+        <Work />
         <Blog />
         <Videos />
         <Contact />

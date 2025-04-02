@@ -48,10 +48,10 @@ const Navbar = () => {
           <i className={`fa-solid ${menuOpen ? 'fa-xmark' : 'fa-bars'}`} />
         </button>
 
-        {/* Menu Desktop */}
-        <ul className={`absolute md:static top-20 left-0 w-full md:w-auto 
-                        bg-darkblue1 md:bg-transparent px-6 md:px-0 py-4 md:py-0 
-                        flex flex-col md:flex-row items-center gap-4 lg:gap-6 
+        {/* Menu */}
+        <ul className={`absolute md:static top-full left-0 w-full md:w-auto
+                        bg-darkblue1 md:bg-transparent px-6 md:px-0 pt-0 md:py-0 
+                        flex flex-col md:flex-row items-center gap-4 lg:gap-6
                         font-cormorant text-base md:text-lg ml-auto
                         transition-all duration-300 
                         ${menuOpen ? 'flex' : 'hidden md:flex'}`}>
@@ -69,12 +69,13 @@ const Navbar = () => {
             <li key={i}>
               <a
                 href={item.href}
+                onClick={() => setMenuOpen(false)}
                 className={`flex items-center gap-1 px-2 py-1 rounded-md transition-all duration-200
                   ${activeSection === item.href.replace('#', '') 
                     ? 'text-[#e98c8b] font-semibold' 
                     : 'text-white hover:text-[#e98c8b]'}`}
               >
-                <i className={`fa-solid ${item.icon} fa-2xs`} aria-hidden="true" />
+                <i className={`fa-solid ${item.icon} fa-xs`} aria-hidden="true" />
                 <span>{item.label}</span>
               </a>
             </li>
