@@ -9,6 +9,8 @@ import Videos from './sections/Videos';
 import Welcome from './sections/Welcome';
 import Blog from './sections/Blog';
 import Formacao from './sections/Formacao';
+import CorporateImpact from  './sections/CorporateImpact';
+
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
 function App() {
@@ -20,6 +22,7 @@ function App() {
         <About />
         <Formacao/>
         <Work />
+        <CorporateImpact/>
         <Blog />
         <Videos />
         <Contact />
