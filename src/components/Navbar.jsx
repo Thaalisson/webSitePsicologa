@@ -1,50 +1,71 @@
-// src/components/Navbar.js
+// src/components/Navbar.jsx
 import React, { useState, useEffect } from 'react';
-import '../styles/NavbarDesktop.css';
-import '../styles/NavbarResponsive.css';
 import logo from '../assets/images/logo.png';
 import '@fortawesome/fontawesome-free/css/all.min.css';
+import useScrollSpy from '../hooks/useScrollSpy';
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const handleScroll = () => {
-    if (window.scrollY > 50) {
-      setScrolled(true);
-    } else {
-      setScrolled(false);
-    }
-  };
+  const sectionIds = ['home', 'about', 'work', 'blog', 'videos', 'contact'];
+  const activeSection = useScrollSpy(sectionIds, 100); // <-- Hook aqui
 
+  // Aplica sombra/transparência quando scrolla
   useEffect(() => {
+    const handleScroll = () => setScrolled(window.scrollY > 50);
     window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
-  };
+  const toggleMenu = () => setMenuOpen(!menuOpen);
 
   return (
-    <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
-      <div className="navbar-container">
-        <ul className={`navbar-links ${menuOpen ? 'open' : ''}`}>
-          <li><a href="#home" onClick={toggleMenu}><i className="fa-solid fa-house-user"></i> Bem-Vindo</a></li>
-          <li><a href="#about" onClick={toggleMenu}><i className="fa-solid fa-brain"></i> Sobre mim</a></li>   
-          <li><a href="#work" onClick={toggleMenu}><i className="fas fa-briefcase"></i> Meu Trabalho</a></li>             
-          <li className="navbar-logo">
-            <img src={logo} alt="Logo" />
-          </li>
-          <li><a href="#blog" onClick={toggleMenu}><i className="fa-solid fa-book-open-reader"></i> Blog</a></li>
-          <li><a href="#videos" onClick={toggleMenu}><i className="fa-solid fa-display"></i> Midia</a></li>
-          <li><a href="#contact" onClick={toggleMenu}><i className="fas fa-envelope"></i> Contatos</a></li>
-        </ul>
-        <button className="navbar-button" onClick={toggleMenu}>
-          <i className={`fas ${menuOpen ? 'fa-times' : 'fa-bars'}`}></i>
+    <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 
+      ${scrolled ? 'bg-darkblue1/90 backdrop-blur-md shadow-md' : 'bg-darkblue1'}`}>
+      <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+        {/* Logo */}
+        <img src={logo} alt="Logo da Instituição" className="h-12 md:h-14" />
+
+        {/* Botão Mobile */}
+        <button
+          onClick={toggleMenu}
+          className="md:hidden text-white text-2xl cursor-pointer"
+          aria-label={menuOpen ? 'Fechar menu' : 'Abrir menu'}
+          aria-expanded={menuOpen}
+        >
+          <i className={`fa-solid ${menuOpen ? 'fa-xmark' : 'fa-bars'}`} />
         </button>
+
+        {/* Menu */}
+        <ul className={`absolute md:static top-20 left-0 w-full md:w-auto 
+                        bg-darkblue1 md:bg-transparent px-6 md:px-0 py-4 md:py-0 
+                        flex flex-col md:flex-row gap-4 md:gap-8 
+                        font-cormorant text-lg 
+                        transition-all duration-300 
+                        ${menuOpen ? 'flex' : 'hidden md:flex'}`}>
+          {[
+            { href: '#home',      icon: 'fa-house',          label: 'Início' },
+            { href: '#about',     icon: 'fa-building',       label: 'Institucional' },
+            { href: '#work',      icon: 'fa-briefcase',      label: 'Soluções Terapêuticas' },
+            { href: '#blog',      icon: 'fa-book-open',      label: 'Publicações' },
+            { href: '#videos',    icon: 'fa-video',          label: 'Mídia' },
+            { href: '#contact',   icon: 'fa-envelope',       label: 'Contato' }
+          ].map((item, i) => (
+            <li key={i}>
+              <a
+                href={item.href}
+                className={`flex items-center gap-2 px-2 py-1 rounded-md transition-all duration-200
+                  ${activeSection === item.href.replace('#', '') 
+                    ? 'text-darkred1 font-semibold' 
+                    : 'text-white hover:text-darkred2'}`}
+              >
+                <i className={`fa-solid ${item.icon} fa-sm`} aria-hidden="true" />
+                <span>{item.label}</span>
+              </a>
+            </li>
+          ))}
+        </ul>
       </div>
     </nav>
   );

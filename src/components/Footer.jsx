@@ -1,27 +1,49 @@
-// src/components/Footer.js
 import React from 'react';
-import '../styles/Footer.css'; // Importa o CSS do Footer
 import logo from '../assets/images/ERIVAN_SIMBOLO-white-rgb.png';
-import '@fortawesome/fontawesome-free/css/all.min.css'; // Importa o CSS do Font Awesome
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+  faInstagram,
+  faWhatsapp,
+  faPinterest,
+  faTiktok,
+} from '@fortawesome/free-brands-svg-icons';
 
 const Footer = () => {
   return (
-    <footer className="footer-container">
-      <div className="logo-container">
-        <img src={logo} alt="Psicóloga Erivan" className="footer-logo" />
-        <p className="footer-text">Psicóloga Erivan</p>
+    <footer className="bg-darkblue1 text-white font-cormorant">
+      {/* Bloco principal */}
+      <div className="max-w-7xl mx-auto px-6 py-6 flex flex-col md:flex-row items-center justify-between gap-6 md:gap-0">
+        {/* Logo e nome */}
+        <div className="flex items-center gap-3">
+          <img src={logo} alt="Logo Erivan" className="h-10" />
+          <span className="text-lg font-semibold tracking-wide">
+            Psicóloga Erivan
+          </span>
+        </div>
+
+        {/* Redes sociais */}
+        <div className="flex gap-5 text-xl">
+          <a href="https://www.instagram.com" target="_blank" rel="noreferrer" title="Instagram">
+            <FontAwesomeIcon icon={faInstagram} className="hover:text-darkred1 transition" />
+          </a>
+          <a href="https://wa.me/xxxxx" target="_blank" rel="noreferrer" title="WhatsApp">
+            <FontAwesomeIcon icon={faWhatsapp} className="hover:text-darkred1 transition" />
+          </a>
+          <a href="https://www.pinterest.com" target="_blank" rel="noreferrer" title="Pinterest">
+            <FontAwesomeIcon icon={faPinterest} className="hover:text-darkred1 transition" />
+          </a>
+          <a href="https://www.tiktok.com" target="_blank" rel="noreferrer" title="TikTok">
+            <FontAwesomeIcon icon={faTiktok} className="hover:text-darkred1 transition" />
+          </a>
+        </div>
       </div>
-      <div className="info-container">
-        <a href="https://www.instagram.com" className="icon-link">
-          <i className="fab fa-instagram"></i>
-        </a>
-        <a href="https://www.whatsapp.com"  className="icon-link">
-          <i className="fab fa-whatsapp"></i>
-        </a>
-      </div>
-      <div className="footer-bottom-text">
-        <p>Desenvolvido por @devThalisson</p>
-        <p>&copy; {new Date().getFullYear()} Todos os direitos reservados.</p>
+
+      {/* Linha separadora */}
+      <div className="border-t border-white/10"></div>
+
+      {/* Créditos */}
+      <div className="text-center py-4 text-sm text-white/70">
+        Desenvolvido por <span className="text-white font-semibold">@devThalisson</span> • © {new Date().getFullYear()} Todos os direitos reservados.
       </div>
     </footer>
   );

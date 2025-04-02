@@ -1,8 +1,5 @@
 // src/App.js
 import React from 'react';
-import { ThemeProvider } from 'styled-components';
-import GlobalStyles from './styles/globalStyles';
-import theme from './styles/theme';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import About from './sections/About';
@@ -13,22 +10,20 @@ import Welcome from './sections/Welcome';
 import Blog from './sections/Blog';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
-
 function App() {
   return (
-    <ThemeProvider theme={theme}>
-      <GlobalStyles />
+    <div className="bg-white text-chocolate font-cormorant">
       <Navbar />
       <main>
         <Welcome />
         <About />
-        <Work/>
+        <Work />
         <Blog />
-        <Videos/>
-        <Contact/>
+        <Videos />
+        <Contact />
       </main>
       <Footer />
-    </ThemeProvider>
+    </div>
   );
 }
 
