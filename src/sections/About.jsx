@@ -19,7 +19,7 @@ const About = () => {
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-chocolate">Sobre Mim</h2>
           <div className="text-lg text-darkblue2 space-y-5 leading-relaxed max-w-3xl">
             <p>
-              Olá! Sou <span className="font-semibold">Erivan Antonia Figueiredo</span>, terapeuta familiar e de casal com uma trajetória sólida e dedicada desde 2003.
+              Olá! Sou <span className="font-semibold">Erivan Antonia Figueiredo</span>, terapeuta familiar e de casal com uma trajetória sólida e dedicada desde 2005.
               Graduada em Psicologia pela UNISANTOS, busquei continuamente ampliar meus conhecimentos com especializações em Terapia Familiar Sistêmica e Neuropsicologia.
             </p>
             <p>
@@ -31,10 +31,10 @@ const About = () => {
               caminhos para uma vida mais equilibrada e harmoniosa.
             </p>
             <div className="mt-8 p-6 border-l-4 border-darkred1 bg-darkred1/5 rounded-md shadow-sm">
-  <p className="text-lg italic font-semibold text-darkred1 leading-relaxed">
-    “Vamos trilhar juntos essa jornada de crescimento e descoberta!”
-  </p>
-</div>
+              <p className="text-lg italic font-semibold text-darkred1 leading-relaxed">
+                “Vamos trilhar juntos essa jornada de crescimento e descoberta!”
+              </p>
+            </div>
           </div>
         </motion.div>
 

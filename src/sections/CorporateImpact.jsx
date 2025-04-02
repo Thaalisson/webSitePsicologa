@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { FaUsers, FaBrain, FaComments, FaChartLine, FaHandshake } from 'react-icons/fa';
 import anaCostaLogo from '../assets/images/ana-costa.png';
 import correiosLogo from '../assets/images/correios.png';
+import ObjetivoLogo from '../assets/images/objetivoEscola.png';
 import oswaldoRamosLogo from '../assets/images/oswaldo-ramos.png';
 import itejLogo from '../assets/images/itej.png';
 
@@ -140,6 +141,12 @@ const CorporateImpact = () => {
                         <div className="flex flex-col items-center">
                             <img src={correiosLogo} alt="Correios" className="h-12 object-contain" />
                             <span className="mt-2 text-sm text-darkblue2 font-light">Correios</span>
+                        </div>
+
+                           {/* Objetivo */}
+                        <div className="flex flex-col items-center">
+                            <img src={ObjetivoLogo} alt="ITEJ" className="h-12 object-contain" />
+                            <span className="mt-2 text-sm text-darkblue2 font-light">Colegio Objetivo</span>
                         </div>
 
                         {/* HRIM */}

@@ -8,10 +8,18 @@ const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const sectionIds = ['home', 'about', 'work', 'blog', 'videos', 'contact'];
-  const activeSection = useScrollSpy(sectionIds, 100); // <-- Hook aqui
+  const sectionIds = [
+    'home',
+    'about',
+    'formacao',
+    'corporate',
+    'work',
+    'blog',
+    'videos',
+    'contact'
+  ];
+  const activeSection = useScrollSpy(sectionIds, 100);
 
-  // Aplica sombra/transparência quando scrolla
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
     window.addEventListener('scroll', handleScroll);
@@ -23,48 +31,55 @@ const Navbar = () => {
   return (
     <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 
       ${scrolled ? 'bg-darkblue1/90 backdrop-blur-md shadow-md' : 'bg-darkblue1'}`}>
-      <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+      
+      <div className="max-w-7xl mx-auto px-4 py-2 flex items-center">
         {/* Logo */}
-        <img src={logo} alt="Logo da Instituição" className="h-12 md:h-14" />
+        <div className="flex-shrink-0">
+          <img src={logo} alt="Logo da Instituição" className="h-12 md:h-14 object-contain" />
+        </div>
 
         {/* Botão Mobile */}
         <button
           onClick={toggleMenu}
-          className="md:hidden text-white text-2xl cursor-pointer"
+          className="md:hidden text-white text-2xl ml-auto"
           aria-label={menuOpen ? 'Fechar menu' : 'Abrir menu'}
           aria-expanded={menuOpen}
         >
           <i className={`fa-solid ${menuOpen ? 'fa-xmark' : 'fa-bars'}`} />
         </button>
 
-        {/* Menu */}
+        {/* Menu Desktop */}
         <ul className={`absolute md:static top-20 left-0 w-full md:w-auto 
                         bg-darkblue1 md:bg-transparent px-6 md:px-0 py-4 md:py-0 
-                        flex flex-col md:flex-row gap-4 md:gap-8 
-                        font-cormorant text-lg 
+                        flex flex-col md:flex-row items-center gap-4 lg:gap-6 
+                        font-cormorant text-base md:text-lg ml-auto
                         transition-all duration-300 
                         ${menuOpen ? 'flex' : 'hidden md:flex'}`}>
+
           {[
-            { href: '#home',      icon: 'fa-house',          label: 'Início' },
-            { href: '#about',     icon: 'fa-building',       label: 'Institucional' },
-            { href: '#work',      icon: 'fa-briefcase',      label: 'Soluções Terapêuticas' },
-            { href: '#blog',      icon: 'fa-book-open',      label: 'Publicações' },
-            { href: '#videos',    icon: 'fa-video',          label: 'Mídia' },
-            { href: '#contact',   icon: 'fa-envelope',       label: 'Contato' }
+            { href: '#home',       icon: 'fa-house',          label: 'Início' },
+            { href: '#about',      icon: 'fa-user',           label: 'Sobre Mim' },
+            { href: '#formacao',   icon: 'fa-graduation-cap', label: 'Formação' },
+            { href: '#corporate',  icon: 'fa-briefcase',      label: 'Corporativo' },
+            { href: '#work',       icon: 'fa-heart',          label: 'Soluções Terapêuticas' },
+            { href: '#blog',       icon: 'fa-book-open',      label: 'Publicações' },
+            { href: '#videos',     icon: 'fa-video',          label: 'Mídia' },
+            { href: '#contact',    icon: 'fa-envelope',       label: 'Contato' }
           ].map((item, i) => (
             <li key={i}>
               <a
                 href={item.href}
-                className={`flex items-center gap-2 px-2 py-1 rounded-md transition-all duration-200
+                className={`flex items-center gap-1 px-2 py-1 rounded-md transition-all duration-200
                   ${activeSection === item.href.replace('#', '') 
-                    ? 'text-darkred1 font-semibold' 
-                    : 'text-white hover:text-darkred2'}`}
+                    ? 'text-[#e98c8b] font-semibold' 
+                    : 'text-white hover:text-[#e98c8b]'}`}
               >
-                <i className={`fa-solid ${item.icon} fa-sm`} aria-hidden="true" />
+                <i className={`fa-solid ${item.icon} fa-2xs`} aria-hidden="true" />
                 <span>{item.label}</span>
               </a>
             </li>
           ))}
+
         </ul>
       </div>
     </nav>
