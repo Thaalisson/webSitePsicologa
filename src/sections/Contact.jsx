@@ -21,19 +21,19 @@ const Contact = () => {
           </p>
 
           <div className="space-y-4 text-lg">
-            <a href="https://wa.me/xxxxx" target="_blank" className="flex items-center gap-3 text-darkblue2 hover:text-darkred1 transition">
+            <a href="https://wa.me/xxxxx" target="_blank" rel="noreferrer" className="flex items-center gap-3 text-darkblue2 hover:text-darkred1 transition">
               <i className="fab fa-whatsapp text-2xl" /> (xx) xxxxx-xxxx
             </a>
-            <a href="https://www.instagram.com/xxxxx.psi" target="_blank" className="flex items-center gap-3 text-darkblue2 hover:text-darkred1 transition">
+            <a href="https://www.instagram.com/xxxxx.psi" target="_blank"  rel="noreferrer" className="flex items-center gap-3 text-darkblue2 hover:text-darkred1 transition">
               <i className="fab fa-instagram text-2xl" /> @xxxxx.psi
             </a>
-            <a href="mailto:contato@xxxxx.com" target="_blank" className="flex items-center gap-3 text-darkblue2 hover:text-darkred1 transition">
+            <a href="mailto:contato@xxxxx.com" target="_blank"  rel="noreferrer" className="flex items-center gap-3 text-darkblue2 hover:text-darkred1 transition">
               <i className="fas fa-envelope text-2xl" /> contato@xxxxx.com
             </a>
-            <a href="https://www.pinterest.com/xxxxx" target="_blank" className="flex items-center gap-3 text-darkblue2 hover:text-darkred1 transition">
+            <a href="https://www.pinterest.com/xxxxx" target="_blank" rel="noreferrer"  className="flex items-center gap-3 text-darkblue2 hover:text-darkred1 transition">
               <i className="fab fa-pinterest text-2xl" /> @xxxxx
             </a>
-            <a href="https://www.tiktok.com/@xxxxx.psi" target="_blank" className="flex items-center gap-3 text-darkblue2 hover:text-darkred1 transition">
+            <a href="https://www.tiktok.com/@xxxxx.psi" target="_blank" rel="noreferrer" className="flex items-center gap-3 text-darkblue2 hover:text-darkred1 transition">
               <i className="fab fa-tiktok text-2xl" /> @xxxxx.psi
             </a>
           </div>
