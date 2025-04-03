@@ -20,7 +20,7 @@ const problems = [
         icon: <FaBrain />,
     },
     {
-        title: 'Falta de Comunicação',
+        title: 'Falha de Comunicação',
         desc: 'Melhorar a interação entre equipes, fortalecendo lideranças e promovendo um clima organizacional positivo.',
         icon: <FaComments />,
     },
