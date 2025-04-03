@@ -3,31 +3,30 @@ import React from 'react';
 import foto from '../assets/images/ErivanWork.jpeg';
 import { motion } from 'framer-motion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBriefcase,faPeopleRoof, faHeart, faBrain } from '@fortawesome/free-solid-svg-icons'; // Ícones principais
+import { faBriefcase, faPeopleRoof, faHeart, faBrain } from '@fortawesome/free-solid-svg-icons';
 
 const Work = () => {
   const cards = [
     {
       title: 'Psicologia Organizacional',
       text: 'Intervenções focadas na saúde emocional de equipes, clima organizacional e performance corporativa.',
-      icon: faBriefcase // ícone corporativo
+      icon: faBriefcase
     },
     {
       title: 'Neuropsicologia',
       text: 'Avaliação e intervenção em questões cognitivas e emocionais.',
-      icon: faBrain, // cérebro
+      icon: faBrain
     },
     {
       title: 'Terapia Familiar Sistêmica',
       text: 'Facilitando a comunicação e resolução de conflitos dentro da família.',
-      icon: faPeopleRoof, // família
+      icon: faPeopleRoof
     },
     {
       title: 'Terapia de Casal',
       text: 'Apoiando casais a fortalecerem seus laços e superarem crises.',
-      icon: faHeart, // coração
-    },
- 
+      icon: faHeart
+    }
   ];
 
   return (
@@ -36,14 +35,15 @@ const Work = () => {
 
         {/* Título */}
         <div className="text-center max-w-3xl mx-auto">
-          <h1 className="text-5xl font-bold mb-6">Soluções Terapêuticas</h1>
-          <p className="text-lg text-darkblue2 leading-relaxed">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">Soluções Terapêuticas</h2>
+          <p className="text-xl text-darkblue2 leading-relaxed">
             Como terapeuta familiar e de casal, meu trabalho é guiado pela empatia, ética e um profundo compromisso com o bem-estar de meus clientes...
           </p>
         </div>
 
         {/* Cards + imagem */}
         <div className="flex flex-col lg:flex-row gap-10 items-center justify-center">
+          {/* Cards */}
           {/* Cards */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 flex-1">
             {cards.map((card, i) => (
@@ -53,11 +53,11 @@ const Work = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: i * 0.2 }}
-                className="bg-darkred1 text-white p-6 rounded-xl shadow-md hover:shadow-xl hover:scale-[1.02] transition"
+                className="bg-darkred1 text-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all border-t-4 border-darkred2"
               >
                 <FontAwesomeIcon icon={card.icon} className="text-3xl mb-3 text-white" />
                 <h3 className="text-xl font-semibold mb-2">{card.title}</h3>
-                <p className="text-sm leading-relaxed">{card.text}</p>
+                <p className="text-base leading-relaxed">{card.text}</p>
               </motion.div>
             ))}
           </div>

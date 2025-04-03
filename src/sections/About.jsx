@@ -1,4 +1,3 @@
-// src/sections/About.jsx
 import React from 'react';
 import foto from '../assets/images/Erivan_pessoa.jpg';
 import { motion } from 'framer-motion';
@@ -17,7 +16,7 @@ const About = () => {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-chocolate">Sobre Mim</h2>
-          <div className="text-lg text-darkblue2 space-y-5 leading-relaxed max-w-3xl">
+          <div className="text-xl text-darkblue2 space-y-6 leading-loose max-w-3xl">
             <p>
               Com <strong>21 anos de experiência em saúde mental</strong>, atuei na prevenção e tratamento de transtornos psicológicos, sempre focada na melhoria da qualidade de vida e do desempenho das pessoas.
             </p>
@@ -32,7 +31,7 @@ const About = () => {
             </p>
 
             <div className="mt-8 p-6 border-l-4 border-darkred1 bg-darkred1/5 rounded-md shadow-sm">
-              <p className="text-lg italic font-semibold text-darkred1 leading-relaxed">
+              <p className="text-xl italic font-semibold text-darkred1 leading-loose">
                 “Vamos construir juntos ambientes mais saudáveis e humanos nas empresas.”
               </p>
             </div>

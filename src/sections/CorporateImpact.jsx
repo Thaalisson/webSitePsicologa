@@ -7,11 +7,13 @@ import correiosLogo from '../assets/images/correios.png';
 import ObjetivoLogo from '../assets/images/objetivoEscola.png';
 import oswaldoRamosLogo from '../assets/images/oswaldo-ramos.png';
 import itejLogo from '../assets/images/itej.png';
+import Logo_ND_2020 from '../assets/images/Logo_ND_2020.png';
+
 
 const problems = [
     {
         title: 'Absenteísmo e Turnover',
-        desc: 'Reduzir faltas e rotatividade, promovendo maior satisfatção e engajamento.',
+        desc: 'Reduzir faltas e rotatividade, promovendo maior satisfação e engajamento.',
         icon: <FaUsers />,
     },
     {
@@ -80,7 +82,7 @@ const CorporateImpact = () => {
                     >
                         Impacto Corporativo
                     </motion.h2>
-                    <p className="text-lg text-darkblue2">
+                    <p className="text-xl text-darkblue2">
                         Soluções psicológicas aplicadas ao mundo empresarial com foco em produtividade, bem-estar e cultura organizacional.
                     </p>
                 </div>
@@ -98,14 +100,14 @@ const CorporateImpact = () => {
                         >
                             <div className="text-3xl text-darkred1 mb-4">{item.icon}</div>
                             <h3 className="text-lg font-semibold mb-2">{item.title}</h3>
-                            <p className="text-sm text-gray-600 leading-relaxed">{item.desc}</p>
+                            <p className="text-base text-gray-600 leading-relaxed">{item.desc}</p>
                         </motion.div>
                     ))}
                 </div>
 
                 {/* Serviços */}
                 <div className="space-y-12">
-                    <h3 className="text-3xl font-semibold text-darkblue1 text-center">Soluções Oferecidas</h3>
+                    <h2 className="text-4xl md:text-5xl font-bold text-darkred1 text-center">Soluções Oferecidas</h2>
                     <div className="grid md:grid-cols-3 gap-8">
                         {services.map((service, i) => (
                             <motion.div
@@ -116,8 +118,8 @@ const CorporateImpact = () => {
                                 transition={{ delay: 0.2 * i, duration: 0.5 }}
                                 viewport={{ once: true }}
                             >
-                                <h4 className="text-xl font-bold mb-2 border-b border-white pb-1">{service.category}</h4>
-                                <ul className="space-y-2 list-disc list-inside text-sm">
+                                <h3 className="text-xl font-bold mb-2 border-b border-white pb-1">{service.category}</h3>
+                                <ul className="space-y-2 list-disc list-inside text-base leading-relaxed">
                                     {service.items.map((item, j) => (
                                         <li key={j}>{item}</li>
                                     ))}
@@ -129,41 +131,36 @@ const CorporateImpact = () => {
 
                 {/* Logo de empresas com nome abaixo */}
                 <div className="text-center pt-16">
-                    <h4 className="text-xl text-darkblue2 font-medium mb-6">Empresas que confiaram:</h4>
+                    <h4 className="text-xl text-darkblue2 font-medium mb-6">
+                        Empresas nas quais ofereci serviços psicológicos e de consultoria
+                    </h4>
                     <div className="flex flex-wrap items-center justify-center gap-12">
-                        {/* Hospital Ana Costa */}
                         <div className="flex flex-col items-center">
                             <img src={anaCostaLogo} alt="Hospital Ana Costa" className="h-12 object-contain" />
                             <span className="mt-2 text-sm text-darkblue2 font-light">Hospital Ana Costa</span>
                         </div>
-
-                        {/* Correios */}
                         <div className="flex flex-col items-center">
                             <img src={correiosLogo} alt="Correios" className="h-12 object-contain" />
                             <span className="mt-2 text-sm text-darkblue2 font-light">Correios</span>
                         </div>
-
-                           {/* Objetivo */}
                         <div className="flex flex-col items-center">
-                            <img src={ObjetivoLogo} alt="ITEJ" className="h-12 object-contain" />
-                            <span className="mt-2 text-sm text-darkblue2 font-light">Colegio Objetivo</span>
+                            <img src={ObjetivoLogo} alt="Colégio Objetivo" className="h-12 object-contain" />
+                            <span className="mt-2 text-sm text-darkblue2 font-light">Colégio Objetivo</span>
                         </div>
-
-                        {/* HRIM */}
                         <div className="flex flex-col items-center">
-                            <img src={oswaldoRamosLogo} alt="Fundação Oswaldo Ramos (HRIM)" className="h-12 object-contain" />
+                            <img src={oswaldoRamosLogo} alt="Fundação Oswaldo Ramos" className="h-12 object-contain" />
                             <span className="mt-2 text-sm text-darkblue2 font-light text-center">Fundação Oswaldo Ramos</span>
                         </div>
-
-                        {/* ITEJ */}
                         <div className="flex flex-col items-center">
                             <img src={itejLogo} alt="ITEJ" className="h-12 object-contain" />
                             <span className="mt-2 text-sm text-darkblue2 font-light">ITEJ</span>
                         </div>
+                        <div className="flex flex-col items-center">
+                            <img src={Logo_ND_2020} alt="Logo_ND_2020" className="h-12 object-contain" />
+                            <span className="mt-2 text-sm text-darkblue2 font-light">Notre Dame</span>
+                        </div>
                     </div>
                 </div>
-
-
             </div>
         </section>
     );
