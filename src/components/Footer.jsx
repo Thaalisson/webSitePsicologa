@@ -4,9 +4,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faInstagram,
   faWhatsapp,
-  faPinterest,
-  faTiktok,
+  faLinkedin,
+  faFacebook,
 } from '@fortawesome/free-brands-svg-icons';
+import { faPhone } from '@fortawesome/free-solid-svg-icons';
 
 const Footer = () => {
   return (
@@ -21,20 +22,41 @@ const Footer = () => {
           </span>
         </div>
 
-        {/* Redes sociais */}
-        <div className="flex gap-5 text-xl">
-          <a href="https://www.instagram.com" target="_blank" rel="noreferrer" title="Instagram">
+        {/* Redes sociais e telefone */}
+        <div className="flex flex-wrap items-center gap-5 text-xl">
+          <a
+            href="https://www.instagram.com/erivanfigueredo.psi/"
+            target="_blank"
+            rel="noreferrer"
+            title="Instagram"
+          >
             <FontAwesomeIcon icon={faInstagram} className="hover:text-darkred1 transition" />
           </a>
-          <a href="https://wa.me/xxxxx" target="_blank" rel="noreferrer" title="WhatsApp">
+          <a
+            href="https://wa.me/13981682500?text=Gostaria%20de%20realizar%20uma%20consulta.%20Vim%20pelo%20site!"
+            target="_blank"
+            rel="noreferrer"
+            title="WhatsApp"
+          >
             <FontAwesomeIcon icon={faWhatsapp} className="hover:text-darkred1 transition" />
           </a>
-          <a href="https://www.pinterest.com" target="_blank" rel="noreferrer" title="Pinterest">
-            <FontAwesomeIcon icon={faPinterest} className="hover:text-darkred1 transition" />
+          <a
+             href="https://www.linkedin.com/in/erivan-figueredo-472935347/"
+            target="_blank"
+            rel="noreferrer"
+            title="LinkedIn"
+          >
+            <FontAwesomeIcon icon={faLinkedin} className="hover:text-darkred1 transition" />
           </a>
-          <a href="https://www.tiktok.com" target="_blank" rel="noreferrer" title="TikTok">
-            <FontAwesomeIcon icon={faTiktok} className="hover:text-darkred1 transition" />
+          <a
+             href="https://www.facebook.com/terapeutafamiliarecasal"
+            target="_blank"
+            rel="noreferrer"
+            title="Facebook"
+          >
+            <FontAwesomeIcon icon={faFacebook} className="hover:text-darkred1 transition" />
           </a>
+        
         </div>
       </div>
 
