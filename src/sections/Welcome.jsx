@@ -12,7 +12,7 @@ const Welcome = () => {
   };
 
   return (
-    <section className="relative h-screen w-full overflow-hidden font-cormorant">
+    <section id="home" className="relative h-screen w-full overflow-hidden font-cormorant">
       {/* Vídeo de fundo */}
       <video autoPlay loop muted className="absolute inset-0 w-full h-full object-cover z-0">
         <source src={videoSrc} type="video/mp4" />
