@@ -19,20 +19,21 @@ const About = () => {
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-chocolate">Sobre Mim</h2>
           <div className="text-lg text-darkblue2 space-y-5 leading-relaxed max-w-3xl">
             <p>
-              Olá! Sou <span className="font-semibold">Erivan Antonia Figueiredo</span>, terapeuta familiar e de casal com uma trajetória sólida e dedicada desde 2005.
-              Graduada em Psicologia pela UNISANTOS, busquei continuamente ampliar meus conhecimentos com especializações em Terapia Familiar Sistêmica e Neuropsicologia.
+              Com <strong>21 anos de experiência em saúde mental</strong>, atuei na prevenção e tratamento de transtornos psicológicos, sempre focada na melhoria da qualidade de vida e do desempenho das pessoas.
             </p>
             <p>
-              Minha missão é auxiliar indivíduos e casais a compreenderem suas emoções, superarem desafios e fortalecerem seus relacionamentos.
-              Acredito profundamente no poder do autoconhecimento e da comunicação eficaz para promover transformações significativas.
+              Como <strong>psicóloga e neuropsicóloga</strong>, minha abordagem combina conhecimento científico e prático para ajudar empresas a construir um ambiente mais saudável, produtivo e harmonioso.
             </p>
             <p>
-              Ofereço um ambiente acolhedor e seguro para crianças, adolescentes e adultos, onde cada um pode explorar seu potencial e encontrar
-              caminhos para uma vida mais equilibrada e harmoniosa.
+              Entendo que os desafios organizacionais vão além da produtividade e impactam diretamente a saúde mental dos colaboradores. Problemas como <strong>absenteísmo, turnover, ansiedade, burnout, estresse</strong> e <strong>dificuldades na comunicação</strong> podem comprometer os resultados da empresa e a satisfação da equipe.
             </p>
+            <p>
+              Por isso, ofereço <strong>soluções personalizadas</strong> para promover bem-estar, engajamento e eficiência no ambiente de trabalho.
+            </p>
+
             <div className="mt-8 p-6 border-l-4 border-darkred1 bg-darkred1/5 rounded-md shadow-sm">
               <p className="text-lg italic font-semibold text-darkred1 leading-relaxed">
-                “Vamos trilhar juntos essa jornada de crescimento e descoberta!”
+                “Vamos construir juntos ambientes mais saudáveis e humanos nas empresas.”
               </p>
             </div>
           </div>
