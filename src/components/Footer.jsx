@@ -66,7 +66,7 @@ const Footer = () => {
       <div className="text-center py-4 text-sm text-white/70">
         Desenvolvido por{' '}
         <a
-          href="https://www.instagram.com/devThalisson"
+          href="https://www.linkedin.com/in/thalissonpereira01/"
           target="_blank"
           rel="noopener noreferrer"
           className="text-white font-semibold hover:underline hover:text-[#e98c8b] transition-colors"
